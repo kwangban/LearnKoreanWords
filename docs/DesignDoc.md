@@ -24,30 +24,33 @@ Korean-English word pairs pulled and cross-referenced(?) from the following sour
 
 ## High-Level Design
 
-Pulling words from the following databases based on frequency/usage: 
-
-(1) Tatoeba
-(2) Wiki
-
-In this version, we will first choose the 100 most used nouns, 
-
+1.  Scraping
+2.  Filtering/Analysis
+3.  Display
+4.  Track (Eventually)
 
 ## Detailed Design
 
-API Endpoints: 
+1.  Scraping
 
-(a) Tatoeba
-(b) Wiki
-(c) 
+    Create a utility which scrapes the Korean Wiktionary database of 100 nouns.  
+
+    MVP (minimally viable product) will require capturing at least 100 entries from the Korean Wiktionary, regardless of type
+
+    en.wiktionary.org/wiki/Wiktionary:Frequency_lists/Korean_5800
+
+1.  Filtering/Analysis
+
+    Create a means (likely CSV) to sort and parse entries pulled from the Wiki database
+
+    
 
 
-Data Models: 
 
 
+1.  Display
 
-Database Schemas: 
-
-We've discussed using CSV to store the lists instead of using json.  Easier to deal with the data.  
+    Create a means to have our data viewed by the user in some organized, digestible fashion
 
 
 ## Alternatives and Trade-offs
