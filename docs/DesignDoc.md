@@ -31,6 +31,9 @@ Korean-English word pairs pulled and cross-referenced(?) from the following sour
 
 ## Detailed Design
 
+1.      Setup a Progress Tracker to ensure script is running properly
+
+
 1.  Scraping
 
     Create a utility which scrapes the Korean Wiktionary database of 100 nouns.  
@@ -39,11 +42,18 @@ Korean-English word pairs pulled and cross-referenced(?) from the following sour
 
     en.wiktionary.org/wiki/Wiktionary:Frequency_lists/Korean_5800
 
+    MVP should include extracting all possible information including sound and pronunciation
+
+    It is okay to leave the soundbytes for later due to the following error: 
+
+        429 Client Error: Too many requests - please contact noc@wikimedia.org to discuss a less disruptive approach or instead use thumbnail images in sizes listed on https://w.wiki/GHai.
+
+    Let's test by taking only ten to see if this resolves our problem.  
+
+
 1.  Filtering/Analysis
 
-    Create a means (likely CSV) to sort and parse entries pulled from the Wiki database
-
-    
+    Create a means (likely CSV) to sort and parse entries pulled from the Korean Wiktionary site and store in local SQLite database, from which we will further parse using CSV
 
 
 
@@ -51,6 +61,8 @@ Korean-English word pairs pulled and cross-referenced(?) from the following sour
 1.  Display
 
     Create a means to have our data viewed by the user in some organized, digestible fashion
+
+    To be more specific, I want a locally running flashcard setup in python from the data above.  
 
 
 ## Alternatives and Trade-offs
