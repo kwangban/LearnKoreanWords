@@ -41,9 +41,7 @@ Korean-English word pairs pulled and cross-referenced(?) from the following sour
 
 1.  Filtering/Analysis
 
-    Create a means (likely CSV) to sort and parse entries pulled from the Wiki database
-
-    
+    Create a means (likely CSV) to sort and parse entries pulled from the Korean Wiktionary site and store in local SQLite database, from which we will further parse using CSV
 
 
 
